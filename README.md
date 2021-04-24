@@ -1,10 +1,10 @@
 # Projekt- und Dateinamen 
 
-presented by : Thomas Kollatz
+presented by : Wieland Carls | Thomas Kollatz
 
-presented at : ITUG Jour Fixe #2
+presented at : ITUG Jour Fixe #3
 
-Zoom 2021-03-30
+Zoom 2021-04-28
 
-online: [https://ITUG.github.io/ITUGJF02/](https://ITUG.github.io/ITUGJF02/)
+online: [https://ITUG.github.io/ITUGJF03/](https://ITUG.github.io/ITUGJF03/)
 
