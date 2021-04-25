@@ -67,35 +67,95 @@
                     >https://github.com/ITUG/ITUGJF03</a><br />Download <a
                     href="https://github.com/ITUG/ITUGJF03/archive/refs/heads/main.zip"
                     >Präsentation und Daten</a> (zip)</h5>
-                 <h5 class="down-75"><strong><a href="https://orcid.org/0000-0001-5485-7681"
-                    target="_blank">Wieland Carls</a></strong>
-                    <img
-                    src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter"
-                    class="twitter-icon" /> <a href="https://twitter.com/felixf006"
-                    title="Wieland Carls on Twitter" target="_blank">Wieland Carls</a>
-                   <br/>
-                    <strong><a href="https://orcid.org/0000-0003-1904-1841"
-                    target="_blank">Thomas Kollatz</a> </strong><!--<a
+                <h5 class="down-75">
+                    <strong>
+                        <a href="https://orcid.org/0000-0001-5485-7681" target="_blank"
+                            >Wieland Carls</a>
+                    </strong>
+                    <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter"
+                        class="twitter-icon" />
+                    <a href="https://twitter.com/felixf006" title="Wieland Carls on Twitter"
+                        target="_blank">Wieland Carls</a>
+                    <br />
+                    <strong>
+                        <a href="https://orcid.org/0000-0003-1904-1841" target="_blank"
+                            >Thomas Kollatz</a>
+                    </strong>
+                    <!--<a
                     href="http://www.adwmainz.de/en/digitalitaet/digitale-akademie.html"
                     target="_blank">Digital
                     Academy</a>@<a href="http://www.adwmainz.de/en/home.html"
-                    target="_blank">Akademie der Wissenschaften und Literatur | Mainz</a>--><img
-                    src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter"
-                    class="twitter-icon" /> <a href="https://twitter.com/kol_t"
-                    title="Thomas Kollatz on Twitter" target="_blank">@kol_t</a>
- <br/><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> </h5>
+                    target="_blank">Akademie der Wissenschaften und Literatur | Mainz</a>-->
+                    <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter"
+                        class="twitter-icon" />
+                    <a href="https://twitter.com/kol_t" title="Thomas Kollatz on Twitter"
+                        target="_blank">@kol_t</a>
+                    <br />
+                    <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
+                </h5>
             </div>
             <!-- div.step-->
             <div class="step">
-                <h2 class="red">TUSTEP *import</h2>
-                <dl class="line-height-one-five">
+                <h2 class="red">Standard-Makros</h2>
+                <p>TUSTEP wird mit einer Reihe von Standard-Makros ausgeliefert.</p>
+                <table class="x-small">
+                    <tr>
+                        <th>Kommando</th>
+                        <th>Funktion</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>#informiere,*</code></pre>
+                        </td>
+                        <td>Liste der Standard-Makros</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>#informiere,*import</code></pre>
+                        </td>
+                        <td>Spezifikationen zu #*import<br/>Import von RTF||Word 2003 XML-Dokumenten nach TUSTEP</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>#informiere,*export</code></pre>
+                        </td>
+                        <td>Spezifikationen zu #*export<br/>Export von TUSTEP-Dateien ins RTF-Format</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>#informiere,*satz</code></pre>
+                        </td>
+                        <td>Spezifikationen zu #*satz<br/>Satz von Texten in verschiedenen Formaten</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="step">
+                <h2 class="red">Ausführen von Standardmakros</h2>
+                <table class="x-small">
+                    <tr><th>Kommando</th><th>Ergebnis</th></tr>
+                    <tr>
+                        <td>
+                            <pre><code>#informiere,*zebe</code></pre>
+                        </td>
+                        <td>Spezifikationen zu #*export<br/>Anzeige von Beschreibungen</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>#*zebe,import</code></pre></td><td>Zeigt Beschreibung des Standard-Makro <code>*import</code></td></tr>
+                        <tr><td><pre><code>#*m,zebe</code></pre></td><td>Aufruf des Standard-Makro <code>*zebe</code> im TUSTEP-Makro-Manager</td></tr>
+                    
+                </table>
+            </div>
+            <div class="step">
+                <h2 class="red">*import</h2>
+                <dl class="line-height-one-five medium">
                     <dt>Allgemeines</dt>
                     <dd>[…] Um Daten von Textverarbeitungsprogrammen wie z. B. MS-Word mit Formatierung und Auszeichnungen zu übernehmen, müssen die Dateien [...] mit dem entsprechenden Programm geladen und als XML-Datei (Word 2003 XML-Dokument, nicht als Word XML-Dokument!) oder <em>als RTF-Datei</em> (Rich-Text-Format) abgespeichert werden; diese Dateien können mit dem <em>Kommando-Makro *IMPORT</em> nach TUSTEP importiert werden. Dabei ist anzugeben, ob bestimmte Informationen zur Formatierung oder Textauszeichnung (z. B. Schriftgröße oder Farbangaben) ignoriert werden können:</dd>
-                    <dd class="centered"
-                        ><code>#*IMPORT, fremddatei, tustepdatei, , +, IGNORIEREN=-</code>
                     <dd class="centered">
-                        <dd class="right">TUSTEP Import & Export (2019), S. 5</dd>
+                        <pre><code>#*IMPORT, fremddatei, tustepdatei, lo=+, IGNORIEREN=-</code></pre>
+                    <dd class="centered"> 
                 </dl>
+                <p class="x-small right">TUSTEP Import & Export (2019), S. 5</p>
             </div>
             <div class="step">
                 <h2 class="red">Gültige Dateinamen</h2>
@@ -269,20 +329,22 @@ files        = SKRIPTE'TEI.DEF'TUSTEP.INI
 projects     = SCR</code></pre>
             </div>
             <div class="step">
-                
                 <div class="row">
-                    
-                    <div class="six columns"> <h2 class="red x-small down-25">FILE_NAMES (projekt, traeger)</h2>
+                    <div class="six columns">
+                        <h2 class="red x-small down-25">FILE_NAMES (projekt, traeger)</h2>
                         <pre><code class="linenumbers">$$ MODE TUSCRIPT,{}
                             
 FETCH root = TUSTEP_DSK
 files      = FILE_NAMES    (<span class="red">-</span>,<span class="red">$</span>root)
 projects   = PROJECT_NAMES (<span class="red">$</span>root)
 </code></pre>
-                        <p class="x-small right">Segment <code>basis02</code> aus <code>-*skripte</code></p>
+                        <p class="x-small right"
+                            >Segment <code>basis02</code> aus <code>-*skripte</code></p>
                     </div>
                     <div class="six columns">
-                        <blockquote class="x-small down-50">Wenn für das Argument projekt »-« (ohne Anführungszeichen) angegeben wird, kann bei dieser Makrofunktion für das Argument traeger auch ein Verzeichnis (directory) angegeben werden. Diese Angabe muss in Anführungszeichen eingeschlossen werden und den vollständigen Pfad zu diesem Verzeichnis sowie den Namen des Verzeichnisses enthalten. Die Makrofunktion liefert in diesem Fall die Namen aller in diesem Verzeichnis enthaltenen Dateien, also auch derjenigen, die einen für TUSTEP unzulässigen Namen haben. </blockquote><p class="x-small right">Handbuch 500-501</p>
+                        <blockquote class="x-small down-50"
+                            >Wenn für das Argument projekt »-« (ohne Anführungszeichen) angegeben wird, kann bei dieser Makrofunktion für das Argument traeger auch ein Verzeichnis (directory) angegeben werden. Diese Angabe muss in Anführungszeichen eingeschlossen werden und den vollständigen Pfad zu diesem Verzeichnis sowie den Namen des Verzeichnisses enthalten. Die Makrofunktion liefert in diesem Fall die Namen aller in diesem Verzeichnis enthaltenen Dateien, also auch derjenigen, die einen für TUSTEP unzulässigen Namen haben. </blockquote>
+                        <p class="x-small right">Handbuch 500-501</p>
                     </div>
                 </div>
                 <h2 class="red x-small up-100">TRACE</h2>
@@ -313,8 +375,14 @@ path2project =ADJUST_PATH (root,newproject)
 DEFINE path2project = path2project
 ERROR/STOP CREATE (<span class="red">"-"</span>,PROJECT,path2project)
 </code></pre>
-                        <p class="x-small right">Segment <code>basis03</code> aus <code>-*skripte</code></p>
-                    </div><div class="five columns"><blockquote class="x-small down-25">Ist für das Argument typ das Schlüsselwort PROJECT und mit dem Argument name kein Projektname, sondern »-« angegeben, so werden diejenigen Verzeichnisse eingerichtet, die für den mit dem Argument traeger angegebenen Pfad noch nicht existieren.</blockquote><p class="x-small right">Handbuch 480</p></div>
+                        <p class="x-small right"
+                            >Segment <code>basis03</code> aus <code>-*skripte</code></p>
+                    </div>
+                    <div class="five columns">
+                        <blockquote class="x-small down-25"
+                            >Ist für das Argument typ das Schlüsselwort PROJECT und mit dem Argument name kein Projektname, sondern »-« angegeben, so werden diejenigen Verzeichnisse eingerichtet, die für den mit dem Argument traeger angegebenen Pfad noch nicht existieren.</blockquote>
+                        <p class="x-small right">Handbuch 480</p>
+                    </div>
                 </div>
                 <h2 class="red x-small">TRACE</h2>
                 <pre><code>   6    00  path2project =ADJUST_PATH(root,newproject)
@@ -345,10 +413,10 @@ path2file    = ~/Downloads/impress/ITUGJF02/#2_material/2021-03-31/001 log.txt
 txtfile      = path2file
   12    00  ERROR/STOP CREATE (txtfile,FDF-o,-)</code></pre>
             </div>
-            <div class="step"><h2 class="red x-small">Zugriff auf Datei mit nicht TUSTEP-konformen Namen</h2>
+            <div class="step">
+                <h2 class="red x-small">Zugriff auf Datei mit nicht TUSTEP-konformen Namen</h2>
                 <div class="row">
                     <div class="seven columns">
-                        
                         <pre><code class=" xml linenumbers">$$ MODE TUSCRIPT,{}
 
 FETCH root   = TUSTEP_DSK
@@ -376,10 +444,11 @@ ERROR/STOP CLOSE (txtfile)
                     </div>
                 </div>
             </div>
-            <div class="step"><h2 class="red x-small">Edieren einer Datei mit nicht TUSTEP-konformen Dateinamen</h2>
+            <div class="step">
+                <h2 class="red x-small"
+                    >Edieren einer Datei mit nicht TUSTEP-konformen Dateinamen</h2>
                 <div class="row">
                     <div class="seven columns">
-                        
                         <pre><code class="xml linenumbers">$$ MODE TUSCRIPT,{}
 
 
