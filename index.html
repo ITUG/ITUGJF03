@@ -177,6 +177,43 @@
                </table>
                </div>
             <div class="step">
+                <h2 class="red centered">Spezifikation: ignorieren</h2>
+                <table class="small">
+                    <!--<tr><td colspan="2" class="centered"><code>MSWORD<br/><a href="material/Carls_001.docx">Carls_001.docx</a></code></td></tr>-->
+                    <tr>
+                        <td  class="centered">ignorieren=<code>-</code></td>
+                        <td class="centered">ignorieren=<code>+</code></td>
+                    </tr>
+                    <tr>
+                        <td  class="centered">Alle <em>vorgesehenen</em> Tags ausgeben</td>
+                        <td class="centered">Alle <em>ignorierbaren</em> Tags nicht ausgeben</td>
+                    </tr>
+                    <tr>
+                        <td><pre><code>&lt;document ?&gt;
+ &lt;head&gt;
+   &lt;!-- styles --&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;!-- text --&gt;
+ &lt;/body&gt;
+&lt;/document&gt;
+</code></pre></td>
+                        <td><pre><code>&lt;document ?&gt;
+ &lt;body&gt;
+  &lt;!-- text --&gt;
+ &lt;/body&gt;
+&lt;/document&gt;
+</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td class="centered">#*export,quelle,ziel,lo=+</td>
+                        <td class="centered">#*export,quelle,ziel,lo=+,defintionenen=datei</td>
+                    </tr>
+                </table>
+                
+               
+            </div>
+            <div class="step">
                 <h1 class="red">*eof</h1>
             </div>
             <!--<div class="step"> <h4>Software (Präsentation)</h4> <ul
