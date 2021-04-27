@@ -119,38 +119,48 @@
                         <td>
                             <pre><code>#informiere,*import</code></pre>
                         </td>
-                        <td>Spezifikationen zu #*import<br/>Import von RTF||Word 2003 XML-Dokumenten nach TUSTEP</td>
+                        <td>Spezifikationen zu #*import<br />Import von RTF||Word 2003 XML-Dokumenten nach TUSTEP</td>
                     </tr>
                     <tr>
                         <td>
                             <pre><code>#informiere,*export</code></pre>
                         </td>
-                        <td>Spezifikationen zu #*export<br/>Export von TUSTEP-Dateien ins RTF-Format</td>
+                        <td>Spezifikationen zu #*export<br />Export von TUSTEP-Dateien ins RTF-Format</td>
                     </tr>
                     <tr>
                         <td>
                             <pre><code>#informiere,*satz</code></pre>
                         </td>
-                        <td>Spezifikationen zu #*satz<br/>Satz von Texten in verschiedenen Formaten</td>
+                        <td>Spezifikationen zu #*satz<br />Satz von Texten in verschiedenen Formaten</td>
                     </tr>
-                    
                 </table>
             </div>
             <div class="step">
                 <h2 class="red">#*zebe</h2>
                 <table class="x-small">
-                    <tr><th>Kommando</th><th>Ergebnis</th></tr>
+                    <tr>
+                        <th>Kommando</th>
+                        <th>Ergebnis</th>
+                    </tr>
                     <tr>
                         <td>
                             <pre><code>#informiere,*zebe</code></pre>
                         </td>
-                        <td>Spezifikationen zu <code>#*zebe</code><br/>Zeige Beschreibungen</td>
+                        <td>Spezifikationen zu <code>#*zebe</code><br />Zeige Beschreibungen</td>
                     </tr>
-                    
-                        <tr><td><pre><code>#*m,zebe</code></pre></td><td>Aufruf des Standard-Makro <code>*zebe</code> im TUSTEP-Makro-Manager</td></tr>
                     <tr>
-                        <td><pre><code>#*zebe,import</code></pre></td><td>Zeigt Beschreibung des Standard-Makro <code>*import</code></td></tr>
-					<!--<tr>
+                        <td>
+                            <pre><code>#*m,zebe</code></pre>
+                        </td>
+                        <td>Aufruf des Standard-Makro <code>*zebe</code> im TUSTEP-Makro-Manager</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>#*zebe,import</code></pre>
+                        </td>
+                        <td>Zeigt Beschreibung des Standard-Makro <code>*import</code></td>
+                    </tr>
+                    <!--<tr>
 						<td><pre><code>#*m,satz</code></pre></td><td>Aufruf des Standard-Makro <code>*satz</code> im TUSTEP-Makro-Manager</td></tr>-->
                 </table>
             </div>
@@ -171,38 +181,72 @@
                 </dl>
                 <p class="x-small right">TUSTEP Import & Export (2019), S. 5</p>
             </div>
-           <div class="step">
-               <h2 class="red centered">Von MS-Word zu TUSTEP</h2>
-               <table>
-                   <tr><td colspan="2" class="centered"><code>MSWORD<br/><a href="material/Carls_001.docx">Carls_001.docx</a></code></td></tr>
-                   <tr>
-                       <td  class="centered">Speichern als <code>RTF</code></td>
-                       <td class="centered">Speichern als <code>Word 2003 XML</code></td>
-                   </tr>
-                   <tr>
-                       <td><figure class="mfp-lightbox centered"><a href="resources/img/saveAsRTF.png"><img src="resources/img/saveAsRTF.png" alt="save as RTF"></a></figure></td>
-                       <td><figure class="mfp-lightbox centered"><a href="resources/img/saveAsWord2003XML.png"><img src="resources/img/saveAsWord2003XML.png" alt="save as Word 2003 XML"></a></figure></td></tr>
-                   <tr>
-                       <td class="centered"><a href="material/Carls_001.rtf"><code>Carls_001.rtf</code></a></td>
-                       <td class="centered"><a href="material/Carls_001.xml"><code>Carls_001.xml</code></a></td>
-                   </tr>
-                   
-               </table>
-               </div>
+            <div class="step">
+                <h2 class="red centered">Von MS-Word zu TUSTEP</h2>
+                <table>
+                    <tr>
+                        <td colspan="2" class="centered">
+                            <code>MSWORD<br /><a href="material/Carls_001.docx">jf03.docx</a></code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="centered">Speichern als <code>RTF</code></td>
+                        <td class="centered">Speichern als <code>Word 2003 XML</code></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <figure class="mfp-lightbox centered">
+                                <a href="resources/img/saveAsRTF.png">
+                                    <img src="resources/img/saveAsRTF.png" alt="save as RTF">
+                                </a>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure class="mfp-lightbox centered">
+                                <a href="resources/img/saveAsWord2003XML.png">
+                                    <img src="resources/img/saveAsWord2003XML.png"
+                                        alt="save as Word 2003 XML">
+                                </a>
+                            </figure>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="centered">
+                            <a href="material/jf03.rtf">
+                                <code>jf03.rtf</code>
+                            </a>
+                        </td>
+                        <td class="centered">
+                            <a href="material/jf03.xml">
+                                <code>jf03.xml</code>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="step">
                 <h2 class="red centered">Spezifikation: ignorieren</h2>
                 <table class="small">
                     <!--<tr><td colspan="2" class="centered"><code>MSWORD<br/><a href="material/Carls_001.docx">Carls_001.docx</a></code></td></tr>-->
                     <tr>
-                        <td  class="centered">ignorieren=<code>-</code></td>
+                        <td class="centered">ignorieren=<code>-</code></td>
                         <td class="centered">ignorieren=<code>+</code></td>
                     </tr>
                     <tr>
-                        <td  class="centered">Alle <em>vorgesehenen</em> Tags ausgeben</td>
+                        <td class="centered">
+                            <pre><code>#*import,jf03.rtf,jf03_minus.tf,lo=+,ig=-</code></pre>
+                        </td>
+                        <td class="centered">
+                            <pre><code>#*import,jf03.rtf,jf03_plus.tf,lo=+,ig=+</code></pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="centered">Alle <em>vorgesehenen</em> Tags ausgeben</td>
                         <td class="centered">Alle <em>ignorierbaren</em> Tags nicht ausgeben</td>
                     </tr>
                     <tr>
-                        <td><pre><code>&lt;document ?&gt;
+                        <td>
+                            <pre><code>&lt;document ?&gt;
  &lt;head&gt;
    &lt;!-- styles --&gt;
  &lt;/head&gt;
@@ -210,29 +254,40 @@
    &lt;!-- text --&gt;
  &lt;/body&gt;
 &lt;/document&gt;
-</code></pre></td>
-                        <td><pre><code>&lt;document ?&gt;
+</code></pre>
+                        </td>
+                        <td>
+                            <pre><code>&lt;document ?&gt;
  &lt;body&gt;
   &lt;!-- text --&gt;
  &lt;/body&gt;
 &lt;/document&gt;
-</code></pre></td>
+</code></pre>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="centered">#*export,quelle,ziel,lo=+</td>
-                        <td class="centered">#*export,quelle,ziel,lo=+,defintionenen=datei</td>
+                        <td class="centered">
+                            <pre><code>#*export,jf03_minus.tf,ziel1.rtf,lo=+,an=+</code></pre>
+                        </td>
+                        <td class="centered">
+                            <pre><code>#*export,jf03_plus.tf,ziel2.rtf,lo=+,definitionen=jf03.def,an=+</code></pre>
+                        </td>
                     </tr>
                 </table>
-                
-               
             </div>
             <div class="step">
                 <h2 class="red">Demo</h2>
-                </div>
+            </div>
             <div class="step">
                 <dl>
                     <dt class="red">03</dt>
                     <dd>Das Standard-Makro #*satz</dd>
+                </dl>
+            </div>
+            <div class="step">
+                <dl>
+                    <dt class="red">04</dt>
+                    <dd>one more thing …</dd>
                 </dl>
             </div>
             <div class="step">
