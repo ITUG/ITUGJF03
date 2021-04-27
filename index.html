@@ -171,7 +171,7 @@
                 </dl>
             </div>
             <div class="step">
-                <h2 class="red">*import</h2>
+                <h2 class="red">#*import</h2>
                 <dl class="line-height-one-five medium">
                     <dt>Allgemeines</dt>
                     <dd>[…] Um Daten von Textverarbeitungsprogrammen wie z. B. MS-Word mit Formatierung und Auszeichnungen zu übernehmen, müssen die Dateien [...] mit dem entsprechenden Programm geladen und als XML-Datei (<strong>Word 2003 XML</strong>-Dokument, nicht als Word XML-Dokument!) oder <strong>als RTF-Datei</strong> (Rich-Text-Format) abgespeichert werden; diese Dateien können mit dem <em>Kommando-Makro *IMPORT</em> nach TUSTEP importiert werden. Dabei ist anzugeben, ob bestimmte Informationen zur Formatierung oder Textauszeichnung (z. B. Schriftgröße oder Farbangaben) ignoriert werden können:</dd>
@@ -275,9 +275,9 @@
                     </tr>
                 </table>
             </div>
-            <div class="step">
+            <!--<div class="step">
                 <h2 class="red">Demo</h2>
-            </div>
+            </div>-->
             <div class="step">
                 <dl>
                     <dt class="red">03</dt>
@@ -285,61 +285,52 @@
                 </dl>
             </div>
             <div class="step">
-                <h2 class="red">*import</h2>
-                <figure><a href="resources/img/makroIMPORT.png"><img src="resources/img/makroIMPORT.png" alt="import"></a></figure>
+                <h2 class="red">#*m,import</h2>
+                <figure  class="mfp-lightbox even-left" ><a href="resources/img/makroIMPORT.png"><img src="resources/img/makroIMPORT.png" alt="import" style="width:80rem"></a></figure>
             </div>
             <div class="step">
-                <h2 class="red">*satz</h2>
-                <figure><a href="resources/img/makroSATZ.png"><img src="resources/img/makroSATZ.png" alt="Satz"></a></figure>
+                <h2 class="red">#*m,satz</h2>
+                <figure class="mfp-lightbox even-left"><a href="resources/img/makroSATZ.png"><img src="resources/img/makroSATZ.png" alt="Satz" style="width:80rem"></a></figure>
             </div>
             <div class="step">
-                <table>
+                <h2 class="red">Arbeitsschritte in #*satz</h2>
+                <table class="x-small">
+                    <tr><th>Kommando/Anweisung</th>
+                        <th>Funktion</th>
+                    <tr>
+                        <td><pre><code>*satz_jf03_satz.tf,mo=ed,par=a5,kopf=+</code></pre></td>
+                        <td>öffnet Editor mit <code>*satz</code> spezifischen Editoreinstellungen</td>
+                    </tr>
+                    <tr>
+                        <td>Aktion <code>ctrl+LEFT-MC</code></td>
+                        <td>Anpassen der Tags an <code>*satz</code> Konventionen</td>
+                    </tr>
+                    <tr>
+                        <td>Button <code>Preview</code></td>
+                        <td>erzeugt Postscript-Datei(en)</td>
+                    </tr>
+                    <tr><td>Button <code>Tag-Liste</code></td><td>zeigt Liste der in <code>*satz</code> vordefinierten Tags</td>
+                    <tr>
+                        <td>
+                            <table class="x-small">
+                                <tr><td><code>&lt;xe&gt;</code></td><td><code>&lt;re&gt;</code></td></tr>
+                                <tr><td><code>&lt;xe type="person"&gt;</code></td><td><code>&lt;r_p&gt;</code></td></tr>
+                            </table>
+                            
+                            </td><td>Austausch in <code>*satz</code>-konforme Registertags</td></tr> 
+                        
                     
-                    <tr>
-                        <td>*satz_jf03_satz.tf,mo=ed,par=a5,kopf=+</td>
-                        <td>öffnet Editor mit *satz spezifischen Editoreinstellungen</td>
-                    </tr>
-                    <tr>
-                        <td>ctrl+LEFT-Mouse</td>
-                        <td>Anpassen der Tags an *satz</td>
-                    </tr>
-                    <tr>
-                        <td>Preview</td>
-                        <td>Postscript-Datei(en)</td>
-                    </tr>
-                    <tr><td>Tag-Liste</td><td>Anzeige der in *Satz vordefinierter Tags</td>
-                    <tr>
-                        <td>xe, xe@type= --> ro</td>
-                        <td></td>
-                    </tr>
                 </table>
             </div>
             
-                <!--<pre>vorher zeigen: *m,import (Bild: makroIMPORT.png) - dann *m,satz (Bild: makroSATZ.png) 
-- dann Preview mit *satz (Fehler) 
-- Bearbeiten der standardmäßig nicht konformen Tags : Hinweis "Satzpatr.seg" und Hinweis "tp"
-- Beim Bearbeiten darauf hinweisen, dass wordkonforme Registereinträge { XE "Name" \f "person"} für einen eintrag ins Personenregister, auch so in der importierten Datei stehen. Für die Weiterverarbeitung mit *satz ohne eigene Parameterdatei werden die Kodierungen <r_o>ORT</r_o>, <r_p>PERSON</r_p> und <r_s>SACHE</r_s> sowie <re>GESAMTREGISTER</re> vorgegeben.  
-- Hinweis auf Satzbeispiele in der Segmentdatei "satzbeispiel.tf". Könntest Du auf die vielen
-Anwendungsbeispiele in der IMPORT/EXPORT-Beschreibung hinweisen?									- PDF zeigen
-- Aufruf Export in *satz geht, aber mit Fehlermeldungen - aber: Inhaltsverzeichnis vh. und Register!
-- Mehr fällt mir nicht ein ... Das kann man auch nicht so gut auf Folien machen. Ich schaue mir das morgen Nachmittag nochmal an. Jetzt muss ich mich noch um mein Seminar kümmern.
-                </pre>-->
+                
             
             <div class="step">
                 <h2 class="red">Beispiele</h2>
-                <blockquote>Sowohl die Beschreibung von import/export <code>#*zebe,import</code> als auch Satz <code>#m,*satzbeispiel</code> bieten zahlreiche illustrative, lehrreichen Beispiele für Anfänger und Fortgeschrittene. </blockquote>
+                <blockquote>Sowohl die Beschreibung von import/export <code>#*zebe,import</code> als auch Satz <code>#m,*satzbeispiel</code> bieten zahlreiche illustrative, lehrreiche Beispiele für Anfänger und Fortgeschrittene. </blockquote>
             </div>
             
-				<!-- vorher zeigen: *m,import (Bild: makroIMPORT.png) - dann *m,satz (Bild: makroSATZ.png) 
-				- dann Preview mit *satz (Fehler) 
-				- Bearbeiten der standardmäßig nicht konformen Tags : Hinweis "Satzpatr.seg" und Hinweis "tp"
-				- Beim Bearbeiten darauf hinweisen, dass wordkonforme Registereinträge { XE "Name" \f "person"} für einen eintrag ins Personenregister, auch so in der importierten Datei stehen. Für die Weiterverarbeitung mit *satz ohne eigene Parameterdatei werden die Kodierungen <r_o>ORT</r_o>, <r_p>PERSON</r_p> und <r_s>SACHE</r_s> sowie <re>GESAMTREGISTER</re> vorgegeben.  
-				- Hinweis auf Satzbeispiele in der Segmentdatei "satzbeispiel.tf". Könntest Du auf die vielen
-					Anwendungsbeispiele in der IMPORT/EXPORT-Beschreibung hinweisen?								
-				- PDF zeigen
-				- Aufruf Export in *satz geht, aber mit Fehlermeldungen - aber: Inhaltsverzeichnis vh. und Register!
-				- Mehr fällt mir nicht ein ... Das kann man auch nicht so gut auf Folien machen. Ich schaue mir das morgen Nachmittag nochmal an. Jetzt muss ich mich noch um mein Seminar kümmern.
-				-->
+				
             
             <div class="step">
                 <dl>
@@ -349,7 +340,7 @@ Anwendungsbeispiele in der IMPORT/EXPORT-Beschreibung hinweisen?									- PDF z
             </div>
             <div class="step">
                 <h2 class="red">Spezifikation: BILDER</h2>
-                <blockquote>Mit der #*import Spezifikation bilder werden Bilder aus der zu importierenden Quelldatei extrahiert und deren Größe und Positionierung in die Zieldatei übernommen.</blockquote>
+                <blockquote>Mit der <code>#*import </code>Spezifikation <code>bilder</code> können in die Worddatei eingebettete Bilder aus der zu importierenden Quelldatei in Bilddateien extrahiert werden. Positionierung und Größe der Bilder in der Quelldatei werden dabei als Attributwerte des <code>&lt;picture&gt;</code>-Elements in die Zieldatei übernommen.</blockquote>
                 <pre><code>#*import,jf03.rtf,jf03_bild.tf,lo=+,ig=+,bilder=bilder*jf01</code></pre>
                 <pre><code>#*export,jf03_bild.tf,zielbild.rtf,lo=+,an=+,de=jf03.def</code></pre>
             </div>
