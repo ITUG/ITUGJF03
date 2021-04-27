@@ -152,13 +152,13 @@
                         <td>
                             <pre><code>#*m,zebe</code></pre>
                         </td>
-                        <td>Aufruf des Standard-Makro <code>*zebe</code> im TUSTEP-Makro-Manager</td>
+                        <td>Aufruf des Standard-Makro <code>*zebe</code> im TUSTEP-Makro-Manager<br/>Konfiguration über Eingabemaske</td>
                     </tr>
                     <tr>
                         <td>
                             <pre><code>#*zebe,import</code></pre>
                         </td>
-                        <td>Zeigt Beschreibung des Standard-Makro <code>*import</code></td>
+                        <td>Zeigt Beschreibung des Standard-Makro <code>*import</code><br/>Konfiguration über Eingabemaske</td>
                     </tr>
                     <!--<tr>
 						<td><pre><code>#*m,satz</code></pre></td><td>Aufruf des Standard-Makro <code>*satz</code> im TUSTEP-Makro-Manager</td></tr>-->
@@ -174,9 +174,9 @@
                 <h2 class="red">*import</h2>
                 <dl class="line-height-one-five medium">
                     <dt>Allgemeines</dt>
-                    <dd>[…] Um Daten von Textverarbeitungsprogrammen wie z. B. MS-Word mit Formatierung und Auszeichnungen zu übernehmen, müssen die Dateien [...] mit dem entsprechenden Programm geladen und als XML-Datei (Word 2003 XML-Dokument, nicht als Word XML-Dokument!) oder <em>als RTF-Datei</em> (Rich-Text-Format) abgespeichert werden; diese Dateien können mit dem <em>Kommando-Makro *IMPORT</em> nach TUSTEP importiert werden. Dabei ist anzugeben, ob bestimmte Informationen zur Formatierung oder Textauszeichnung (z. B. Schriftgröße oder Farbangaben) ignoriert werden können:</dd>
+                    <dd>[…] Um Daten von Textverarbeitungsprogrammen wie z. B. MS-Word mit Formatierung und Auszeichnungen zu übernehmen, müssen die Dateien [...] mit dem entsprechenden Programm geladen und als XML-Datei (<strong>Word 2003 XML</strong>-Dokument, nicht als Word XML-Dokument!) oder <strong>als RTF-Datei</strong> (Rich-Text-Format) abgespeichert werden; diese Dateien können mit dem <em>Kommando-Makro *IMPORT</em> nach TUSTEP importiert werden. Dabei ist anzugeben, ob bestimmte Informationen zur Formatierung oder Textauszeichnung (z. B. Schriftgröße oder Farbangaben) ignoriert werden können:</dd>
                     <dd class="centered">
-                        <pre><code>#*IMPORT, fremddatei, tustepdatei, lo=+, IGNORIEREN=-</code></pre>
+                        <code>#*IMPORT, fremddatei, tustepdatei, lo=+, IGNORIEREN=-</code>
                     <dd class="centered"> 
                 </dl>
                 <p class="x-small right">TUSTEP Import & Export (2019), S. 5</p>
@@ -186,7 +186,7 @@
                 <table>
                     <tr>
                         <td colspan="2" class="centered">
-                            <code>MSWORD<br /><a href="material/Carls_001.docx">jf03.docx</a></code>
+                            <code>MSWORD<br /><a href="material/jf03.docx">jf03.docx</a></code>
                         </td>
                     </tr>
                     <tr>
@@ -226,7 +226,7 @@
             </div>
             <div class="step">
                 <h2 class="red centered">Spezifikation: ignorieren</h2>
-                <table class="small">
+                <table class="x-small">
                     <!--<tr><td colspan="2" class="centered"><code>MSWORD<br/><a href="material/Carls_001.docx">Carls_001.docx</a></code></td></tr>-->
                     <tr>
                         <td class="centered">ignorieren=<code>-</code></td>
@@ -270,7 +270,7 @@
                             <pre><code>#*export,jf03_minus.tf,ziel1.rtf,lo=+,an=+</code></pre>
                         </td>
                         <td class="centered">
-                            <pre><code>#*export,jf03_plus.tf,ziel2.rtf,lo=+,definitionen=jf03.def,an=+</code></pre>
+                            <pre><code>#*export,jf03_plus.tf,ziel2.rtf,lo=+,an=+,def=jf03.def</code></pre>
                         </td>
                     </tr>
                 </table>
@@ -300,6 +300,13 @@
                     <dd>one more thing …</dd>
                 </dl>
             </div>
+            <div class="step">
+                <h2 class="red">Spezifikation: BILDER</h2>
+                <blockquote>Mit der #*import Spezifikation bilder werden Bilder aus der zu importierenden Quelldatei extrahiert und deren Größe und Positionierung in die Zieldatei übernommen.</blockquote>
+                <pre><code>#*import,jf03.rtf,jf03_bild.tf,lo=+,ig=+,bilder=bilder*jf01</code></pre>
+                <pre><code>#*export,jf03_bild.tf,zielbild.rtf,lo=+,an=+,de=jf03.def</code></pre>
+            </div>
+          
             <div class="step">
                 <h1 class="red">*eof</h1>
             </div>
