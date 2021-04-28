@@ -12,7 +12,7 @@ online: [https://ITUG.github.io/ITUGJF03/](https://ITUG.github.io/ITUGJF03/)
 
 # Handout
 
-## step3 Standard-Makros
+## [step-3](https://itug.github.io/ITUGJF03/#/step-3) Standard-Makros
 
 ```
 #informiere,*
@@ -20,14 +20,14 @@ online: [https://ITUG.github.io/ITUGJF03/](https://ITUG.github.io/ITUGJF03/)
 #informiere,*satz
 ```
 
-## step4 #*zebe
+## [step-4](https://itug.github.io/ITUGJF03/#/step-4) #*zebe
 ```
 #informiere,*zebe
 #*m,zebe
 #*zebe,import
 ```
 
-## step8 #Spezifikation: Ignorieren
+## [step-8](https://itug.github.io/ITUGJF03/#/step-8) Spezifikation: Ignorieren
 ```
 #*import,jf03.rtf,jf03_minus.tf,lo=+,ig=-
 #e,jf03_minus.tf
@@ -64,7 +64,7 @@ online: [https://ITUG.github.io/ITUGJF03/](https://ITUG.github.io/ITUGJF03/)
 #*export,jf03_plus.tf,ziel2.rtf,lo=+,an=+,de=jf03.def
 ```
 
-## Spezifikation: Bilder
+## [step-15](https://itug.github.io/ITUGJF03/#/step-15) Spezifikation: Bilder
 ```
 #*import,jf03.rtf,jf03_bild.tf,lo=+,ig=+,bilder=bilder*jf01
 #*export,jf03_bild.tf,zielbild.rtf,lo=+,an=+,de=jf03.def
